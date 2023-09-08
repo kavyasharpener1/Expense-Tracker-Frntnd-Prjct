@@ -1,5 +1,5 @@
-import ProfileForm from './ProfileForm';
-import classes from './UserProfile.module.css';
+import ProfileForm from './profileform';
+import classes from './userprofile.module.css';
 
 const UserProfile = () => {
   return (

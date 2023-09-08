@@ -1,4 +1,4 @@
-import StartingPageContent from '../components/StartingPage/StartingPageContent';
+import StartingPageContent from '../components/startingpage/startingpagecontent';
 
 const HomePage = () => {
   return <StartingPageContent />;

@@ -1,10 +1,10 @@
 import { Switch, Route, Redirect } from "react-router-dom";
-import Layout from "./components/Layout/Layout";
-import UserProfile from "./components/Profile/UserProfile";
-import AuthPage from "./Pages/AuthPage";
-import HomePage from "./Pages/HomePage";
-import AuthContext from "./Store/Auth-Context";
-import ExpenseForm from "./components/ExpensesForm/ExpenseForm";
+import Layout from "./components/layout/layout";
+import UserProfile from "./components/profile/userprofile";
+import AuthPage from "./pages/authpage";
+import HomePage from "./pages/homepage";
+import AuthContext from "./store/auth-context";
+import ExpenseForm from "./components/expensesform/expenseform";
 import { useContext } from "react";
 
 function App() {

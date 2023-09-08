@@ -1,7 +1,7 @@
 import { useState, useRef, useContext } from 'react';
 
-import classes from './AuthForm.module.css';
-import AuthContext from '../../Store/Auth-Context';
+import classes from './authform.module.css';
+import AuthContext from '../../store/auth-context';
 import { useHistory } from 'react-router-dom';
 
 const AuthForm = () => {
