@@ -4,7 +4,7 @@ import UserProfile from "./components/Profile/UserProfile";
 import AuthPage from "./pages/AuthPage";
 import HomePage from "./pages/HomePage";
 import AuthContext from "./store/auth-context";
-import ExpenseForm from "./components/ExpenseForm/ExpenseForm";
+import ExpenseForm from "./components/ExpensesForm/ExpenseForm";
 import { useContext } from "react";
 
 function App() {
