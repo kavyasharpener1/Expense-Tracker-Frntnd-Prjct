@@ -35,7 +35,7 @@ const AuthForm = () => {
 
     if(isLogin){
 
-      fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBugpJZR9F9u-3iceiwGxAwOo3bkQNFnkk',{
+      fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyClLO8O-QV5g0EAt-jqKtJSk00fNvc-4fM',{
         method:'POST',
         body:JSON.stringify({
           email:enteredEmail,
@@ -46,16 +46,13 @@ const AuthForm = () => {
           'content-type':"application/json"
         }
       })
-      .then((res) => {
+      .then(async (res) => {
         setIsLoading(false)
         if(res.ok){
           return res.json();
         }else{
-          return res.json().then((data) => {
-            let errorMessage = 'Authentication failed';
-            
-            throw new Error(errorMessage)
-          })
+          let errorMessage = 'Authentication failed';
+          throw new Error(errorMessage);
         }
       })
       .then((data) => {
@@ -71,7 +68,7 @@ const AuthForm = () => {
 
     }
     else{
-      fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBugpJZR9F9u-3iceiwGxAwOo3bkQNFnkk',{
+      fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyClLO8O-QV5g0EAt-jqKtJSk00fNvc-4fM',{
         method:'POST',
         body:JSON.stringify({
           email:enteredEmail,
@@ -82,19 +79,16 @@ const AuthForm = () => {
           'content-type':"application/json"
         }
       })
-      .then((res) => {
+      .then(async (res) => {
         setIsLoading(false)
         if(res.ok){
           return res.json();
         }else{
-          return res.json().then((data) => {
-            let errorMessage = 'Authentication failed';
-            
-            throw new Error(errorMessage)
-          })
+          let errorMessage = 'Authentication failed';
+          throw new Error(errorMessage);
         }
       })
-      .then((data) => {
+      .then(() => {
         alert('Account created successfully')
       })      
       .catch((err) => {

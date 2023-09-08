@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useContext } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import axios from "axios";
 
 
@@ -10,8 +10,6 @@ const ExpenseForm = () => {
   const [selectedCategory, setSelectedCategory] = useState("Category");
 
 
-  const Useremail = localStorage.getItem("mail");
-  const ChangesEMail = Useremail.replace("@", "").replace(".", "");
 
   const email = useRef();
   const des = useRef();
@@ -20,7 +18,7 @@ const ExpenseForm = () => {
 
   useEffect(() => {
     axios
-    .get(`https://react-expense-tracker-77f1b-default-rtdb.firebaseio.com/expenses/${ChangesEMail}.json`)
+    .get(`https://expense-project-f98b4-default-rtdb.firebaseio.com/expenses/.json`)
     .then((response) => {
       const fetchedExpenses = []
       for(let key in response.data){
@@ -51,7 +49,7 @@ const ExpenseForm = () => {
 
 
     axios
-    .post(`https://react-expense-tracker-77f1b-default-rtdb.firebaseio.com/expenses/${ChangesEMail}.json`,{
+    .post(`https://expense-project-f98b4-default-rtdb.firebaseio.com/expenses/.json`,{
       amount:enteredEmail,
       description:enteredDes,
       category:enteredCategory
@@ -90,7 +88,7 @@ const ExpenseForm = () => {
 
   const handleDelete = (id) => {
     axios
-    .delete(`https://react-expense-tracker-77f1b-default-rtdb.firebaseio.com/expenses/${ChangesEMail}/${id}.json`)
+    .delete(`https://expense-project-f98b4-default-rtdb.firebaseio.com/expenses/.json`)
     .then(() => {
       setExpenses((prevExpenses) => prevExpenses.filter((expense) => expense.id !== id))
     })
@@ -142,7 +140,7 @@ const ExpenseForm = () => {
             onChange={(event) => setSelectedCategory(event.target.value)}
             style={{ padding: "10px", borderRadius: "10px", margin: "5px" }}
           >
-            {/* <option value="Category">Category</option> */}
+           <option value="Category">Category</option>
             <option value="Food">Food</option>
             <option value="Shopping">Shopping</option>
             <option value="Travel">Travel</option>
@@ -157,7 +155,7 @@ const ExpenseForm = () => {
               borderRadius: "10px",
               backgroundColor: "grey",
               color: "black",
-              borderRadius: "10px",
+              // borderRadius: "10px",
               fontWeight: "bold",
               cursor: "pointer",
             }}
@@ -197,7 +195,7 @@ const ExpenseForm = () => {
                       margin: "5px",
                       backgroundColor: "red",
                       color: "yellow",
-                      backgroundColor: "blue",
+                      // backgroundColor: "blue",
                       cursor: "pointer",
                     }}
                   >

@@ -19,7 +19,7 @@ const ProfileForm = () => {
 
     const enteredNewPassword = newPasswordInputRef.current.value
 
-    fetch('https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyBugpJZR9F9u-3iceiwGxAwOo3bkQNFnkk',{
+    fetch('https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyClLO8O-QV5g0EAt-jqKtJSk00fNvc-4fM',{
       method:'POST',
       body:JSON.stringify({
         idToken:authCtx.token,
