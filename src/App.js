@@ -3,7 +3,7 @@ import Layout from "./components/Layout/Layout";
 import UserProfile from "./components/Profile/UserProfile";
 import AuthPage from "./Pages/AuthPage";
 import HomePage from "./Pages/HomePage";
-import AuthContext from "./Store/auth-context";
+import AuthContext from "./Store/Auth-Context";
 import ExpenseForm from "./components/ExpensesForm/ExpenseForm";
 import { useContext } from "react";
 
