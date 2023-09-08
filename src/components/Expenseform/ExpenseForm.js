@@ -2,12 +2,7 @@ import React, { useRef, useState, useEffect, useContext } from "react";
 import axios from "axios";
 
 
-
-
 const ExpenseForm = () => {
-
-
-
 
   const [expenses, setExpenses] = useState([]);
   const [enteredAmount, setEnteredAmount] = useState("");

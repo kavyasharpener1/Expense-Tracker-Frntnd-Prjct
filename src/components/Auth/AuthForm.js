@@ -35,7 +35,7 @@ const AuthForm = () => {
 
     if(isLogin){
 
-      fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyClLO8O-QV5g0EAt-jqKtJSk00fNvc-4fM',{
+      fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBugpJZR9F9u-3iceiwGxAwOo3bkQNFnkk',{
         method:'POST',
         body:JSON.stringify({
           email:enteredEmail,
@@ -71,7 +71,7 @@ const AuthForm = () => {
 
     }
     else{
-      fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyClLO8O-QV5g0EAt-jqKtJSk00fNvc-4fM',{
+      fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBugpJZR9F9u-3iceiwGxAwOo3bkQNFnkk',{
         method:'POST',
         body:JSON.stringify({
           email:enteredEmail,
