@@ -172,10 +172,10 @@ const ExpenseForm = () => {
             borderRadius: "10px",
             margin: "1px",
             color: "blue",
-            backgroundColor: "green",
+            backgroundColor: "white",
             cursor: "pointer",
             height:"50px"
-          }} onClick={() => alert('Pay 10000 to Activate Premium')}>Activate Premium</button>
+          }} onClick={() => alert('Pay Rs.10,000 to Activate Premium')}>PREMIUM ACTIVATION</button>
         )}
 
         </div>
